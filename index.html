@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$TRUSK - Trump vs Musk Showdown</title>
+    <meta name="description" content="Join the epic showdown between Elon Musk and Donald Trump with $TRUSK token. Follow the development, participate in the community, and be part of history.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://trusk.io/">
+    <meta property="og:title" content="$TRUSK - Trump vs Musk Showdown">
+    <meta property="og:description" content="Join the epic showdown between Elon Musk and Donald Trump with $TRUSK token. Follow the development, participate in the community, and be part of history.">
+    <meta property="og:image" content="https://trusk.io/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://trusk.io/">
+    <meta property="twitter:title" content="$TRUSK - Trump vs Musk Showdown">
+    <meta property="twitter:description" content="Join the epic showdown between Elon Musk and Donald Trump with $TRUSK token. Follow the development, participate in the community, and be part of history.">
+    <meta property="twitter:image" content="https://trusk.io/og-image.jpg">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'trusk-red': '#FF0000',
+                        'trusk-dark-red': '#8B0000',
+                        'trusk-burgundy': '#800020',
+                    },
+                    fontFamily: {
+                        'oswald': ['Oswald', 'sans-serif'],
+                        'inter': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Oswald', sans-serif;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #FF0000;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Sticky Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm border-b border-trusk-red/30">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-trusk-red">$TRUSK</a>
+                <div id="mobile-menu" class="hidden md:flex space-x-8">
+                    <a href="#hero" class="nav-link text-white hover:text-trusk-red transition-colors duration-300">Hero</a>
+                    <a href="#comparison" class="nav-link text-white hover:text-trusk-red transition-colors duration-300">Comparison</a>
+                    <a href="#timeline" class="nav-link text-white hover:text-trusk-red transition-colors duration-300">Timeline</a>
+                    <a href="#join" class="nav-link text-white hover:text-trusk-red transition-colors duration-300">Join</a>
+                </div>
+                <button id="menu-button" class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/95 z-40 hidden">
+        <div class="container mx-auto px-4 py-20">
+            <div class="flex flex-col space-y-6 text-center">
+                <a href="#hero" class="text-2xl text-white hover:text-trusk-red transition-colors duration-300" onclick="closeMobileMenu()">Hero</a>
+                <a href="#comparison" class="text-2xl text-white hover:text-trusk-red transition-colors duration-300" onclick="closeMobileMenu()">Comparison</a>
+                <a href="#timeline" class="text-2xl text-white hover:text-trusk-red transition-colors duration-300" onclick="closeMobileMenu()">Timeline</a>
+                <a href="#join" class="text-2xl text-white hover:text-trusk-red transition-colors duration-300" onclick="closeMobileMenu()">Join</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen relative overflow-hidden pt-20">
+        <div class="absolute inset-0">
+            <img src="./3e628e46-dd08-4270-97f2-604690dd6611.jpeg" alt="Trump vs Musk" class="w-full h-full object-cover" loading="lazy" width="1920" height="1080">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/70 to-black"></div>
+        </div>
+        <div class="container mx-auto px-4 py-20 relative z-10">
+            <div class="text-center" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white">
+                    Elon Musk vs Donald Trump
+                </h1>
+                <div class="mb-8">
+                    <img src="./trusk-coin.jpg" alt="TRUSK Coin" class="w-32 h-32 mx-auto rounded-full animate-pulse shadow-[0_0_15px_rgba(255,0,0,0.5)] hover:shadow-[0_0_25px_rgba(255,0,0,0.7)] transition-all duration-300" loading="lazy" width="128" height="128">
+                </div>
+                <p class="text-xl md:text-2xl mb-8 text-gray-300">
+                    Who will win this epic showdown?
+                </p>
+                <div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+                    <a href="https://t.me/blum/app?startapp=memepadjetton_TRUSK_9rrpN-ref_fvtL2wPQH1" target="_blank" 
+                       class="w-full md:w-auto bg-trusk-red hover:bg-trusk-dark-red text-white font-bold py-4 px-12 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center shadow-lg shadow-trusk-red/20">
+                        Trade on Blum
+                    </a>
+                    <a href="https://t.me/trusk_blum_community" target="_blank" 
+                       class="w-full md:w-auto bg-[#0088cc] hover:bg-[#006699] text-white font-bold py-4 px-12 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center shadow-lg shadow-[#0088cc]/20">
+                        Join Community
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section id="comparison" class="py-20 bg-gradient-to-b from-black to-trusk-dark-red/30">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-trusk-red" data-aos="fade-up">Titans Comparison</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Trump Card -->
+                <div class="bg-trusk-dark-red/20 p-6 rounded-lg border border-trusk-red/30" data-aos="fade-right" data-aos-delay="100">
+                    <div class="aspect-w-16 aspect-h-9 mb-4 bg-gray-800 rounded-lg"></div>
+                    <h3 class="text-2xl font-bold mb-4 text-trusk-red">Donald Trump</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <span class="text-trusk-red mr-2">•</span>
+                            <span>45th and 47th President of the United States</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-trusk-red mr-2">•</span>
+                            <span>2024 Republican Nominee and re-elected in 2024</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-trusk-red mr-2">•</span>
+                            <span>Facing multiple ongoing legal battles</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-trusk-red mr-2">•</span>
+                            <span>Owner of Truth Social platform</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Musk Card -->
+                <div class="bg-trusk-dark-red/20 p-6 rounded-lg border border-trusk-red/30" data-aos="fade-left" data-aos-delay="200">
+                    <div class="aspect-w-16 aspect-h-9 mb-4 bg-gray-800 rounded-lg"></div>
+                    <h3 class="text-2xl font-bold mb-4 text-trusk-red">Elon Musk</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <span class="text-trusk-red mr-2">•</span>
+                            <span>CEO of Tesla, SpaceX, and Neuralink</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-trusk-red mr-2">•</span>
+                            <span>Owner of X (formerly Twitter)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-trusk-red mr-2">•</span>
+                            <span>Launched Grok AI as a ChatGPT alternative</span>
+                        </li>
+                        <li class="flex items-center">
+                            <span class="text-trusk-red mr-2">•</span>
+                            <span>Known for anti-censorship and anti-woke stance</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-trusk-red" data-aos="fade-up">$TRUSK Development</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="relative border-l-2 border-trusk-red pl-8 space-y-12">
+                    <!-- Timeline Items -->
+                    <div class="relative" data-aos="fade-up" data-aos-delay="100">
+                        <div class="absolute -left-10 mt-1.5 h-4 w-4 rounded-full bg-trusk-red"></div>
+                        <div class="bg-trusk-dark-red/20 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-2 text-trusk-red">June 2025</h3>
+                            <p class="text-gray-300">Token Launch on Blum Memepad</p>
+                        </div>
+                    </div>
+                    <div class="relative" data-aos="fade-up" data-aos-delay="200">
+                        <div class="absolute -left-10 mt-1.5 h-4 w-4 rounded-full bg-trusk-red"></div>
+                        <div class="bg-trusk-dark-red/20 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-2 text-trusk-red">June 2025</h3>
+                            <p class="text-gray-300">Official Website Launch</p>
+                        </div>
+                    </div>
+                    <div class="relative" data-aos="fade-up" data-aos-delay="300">
+                        <div class="absolute -left-10 mt-1.5 h-4 w-4 rounded-full bg-trusk-red"></div>
+                        <div class="bg-trusk-dark-red/20 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-2 text-trusk-red">Coming VERY Soon!</h3>
+                            <p class="text-gray-300">Listing on StonFi DEX</p>
+                        </div>
+                    </div>
+                    <div class="relative" data-aos="fade-up" data-aos-delay="400">
+                        <div class="absolute -left-10 mt-1.5 h-4 w-4 rounded-full bg-trusk-red"></div>
+                        <div class="bg-trusk-dark-red/20 p-6 rounded-lg">
+                            <h3 class="text-xl font-bold mb-2 text-trusk-red">Future Plans</h3>
+                            <ul class="space-y-2">
+                                <li class="flex items-center">
+                                    <span class="text-trusk-red mr-2">•</span>
+                                    <span class="text-gray-300">Telegram Mini App Launch</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="text-trusk-red mr-2">•</span>
+                                    <span class="text-gray-300">$TRUSK Lockup mechanism</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <span class="text-trusk-red mr-2">•</span>
+                                    <span class="text-gray-300">Rewards for Holders</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gradient-to-b from-black to-trusk-dark-red/30">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-trusk-red" data-aos="fade-up">Frequently Asked Questions</h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-trusk-dark-red/20 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-bold mb-2 text-trusk-red">What is $TRUSK?</h3>
+                    <p class="text-gray-300">$TRUSK is a community-driven token that follows the epic showdown between Elon Musk and Donald Trump, combining elements of technology, politics, and social media influence.</p>
+                </div>
+                <div class="bg-trusk-dark-red/20 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold mb-2 text-trusk-red">How can I buy $TRUSK?</h3>
+                    <p class="text-gray-300">You can purchase $TRUSK on Blum Memepad. Join our Telegram community for the latest updates and trading information.</p>
+                </div>
+                <div class="bg-trusk-dark-red/20 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-bold mb-2 text-trusk-red">What's next for $TRUSK?</h3>
+                    <p class="text-gray-300">We're planning to list on StonFi DEX and launch our Telegram Mini App. Stay tuned for more exciting developments!</p>
+                </div>
+                <div class="bg-trusk-dark-red/20 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="text-xl font-bold mb-2 text-trusk-red">How can I join the community?</h3>
+                    <p class="text-gray-300">Join our Telegram community to stay updated, participate in discussions, and be part of the $TRUSK ecosystem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="join" class="py-20 bg-gradient-to-b from-trusk-dark-red/30 to-black">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-trusk-red" data-aos="fade-up">Join $TRUSK</h2>
+            <p class="text-xl mb-8 text-gray-300 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                Follow the events and be part of history
+            </p>
+            <div class="flex flex-col md:flex-row gap-6 justify-center items-center mb-8" data-aos="fade-up" data-aos-delay="200">
+                <a href="https://t.me/blum/app?startapp=memepadjetton_TRUSK_9rrpN-ref_fvtL2wPQH1" target="_blank" 
+                   class="w-full md:w-auto bg-trusk-red hover:bg-trusk-dark-red text-white font-bold py-4 px-12 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center shadow-lg shadow-trusk-red/20">
+                    Trade on Blum
+                </a>
+                <a href="https://t.me/trusk_blum_community" target="_blank" 
+                   class="w-full md:w-auto bg-[#0088cc] hover:bg-[#006699] text-white font-bold py-4 px-12 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center shadow-lg shadow-[#0088cc]/20">
+                    Join Community
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-black border-t border-trusk-red/30">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-4">
+                <a href="https://t.me/trusk_blum_community" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    Telegram Community
+                </a>
+                <span class="text-gray-600">•</span>
+                <a href="https://t.me/blum/app?startapp=memepadjetton_TRUSK_9rrpN-ref_fvtL2wPQH1" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-300">
+                    Launch on Blum
+                </a>
+            </div>
+            <p class="text-center text-gray-400">&copy; 2024 $TRUSK. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+
+        // Mobile menu functionality
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu-overlay');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+            document.body.style.overflow = mobileMenu.classList.contains('hidden') ? '' : 'hidden';
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        menuButton.addEventListener('click', toggleMobileMenu);
+
+        // Close mobile menu when clicking outside
+        mobileMenu.addEventListener('click', function(e) {
+            if (e.target === mobileMenu) {
+                closeMobileMenu();
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    const headerOffset = 80; // Adjust this value based on your header height
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
